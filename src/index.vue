@@ -7,7 +7,7 @@
       <slot />
     </div>
 
-    <tbl v-bind="$props" />
+    <slot name="table"><tbl v-bind="$props" /></slot>
     
     <div v-if="Pagination" class="row" style="margin-top: 10px">
       <div class="col-sm-6" style="white-space: nowrap">
