@@ -7,8 +7,9 @@
       <slot />
     </div>
 
-    <slot name="table"><tbl v-bind="$props" /></slot>
-    
+    <slot name="table" v-if="pending"></slot>
+    <tbl v-bind="$props" v-show="!pending" />
+
     <div v-if="Pagination" class="row" style="margin-top: 10px">
       <div class="col-sm-6" style="white-space: nowrap">
         <strong>

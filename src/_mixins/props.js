@@ -2,6 +2,7 @@ export default {
   props: {
     columns: { type: Array, required: true },
     data: { type: Array, required: true }, // rows
+    pending: {type: Boolean, required: false },
     total: { type: Number, required: true },
     query: { type: Object, required: true },
     selection: Array, // container for multi-select
